@@ -1,0 +1,16 @@
+To run the evaluation on the datasets:
+
+python3 evaluate-v2.0.py ./reference/<reference_filename> ./results/<model_output_filename>
+
+file structure:
+./reference/
+dev-squad-v2.0.json: reference on SQuAD 2.0
+dev-aqa.json: reference on Adversarial QA
+dev-joint.json: reference on combination of the 2 above dataset
+
+./results/
+dev_albert-base-v2_combined.json: result of DocumentReader ALBERT fine-tuned on combined dataset
+dev_bert-base-uncased_combined.json: result of DocumentReader BERT fine-tuned on combined dataset
+dev_bert-base-uncased-squadv2_combined.json: baseline BERT fine-tuned on SQuAD 2.0
+dev_luqa_albert_full_1p.json: full model ALBERT
+dev_luqa_bert_full_1p.json: full model BERT 
